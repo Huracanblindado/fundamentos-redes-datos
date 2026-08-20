@@ -58,3 +58,27 @@ Casos de uso más comunes:
 Diagnóstico rápido: Usa tracert -d <destino> para obtener una respuesta inmediata sin perder tiempo esperando la traducción de nombres DNS.
 
 Redes lentas o lejanas: Usa tracert -w 3000 <destino> si estás diagnosticando una conexión satelital o muy lenta para evitar falsos "tiempos de espera agotados".
+
+nslookup
+Elemento	Descripción y Función
+nslookup	Comando ejecutado: Significa Name Server Lookup. Es una herramienta de consola utilizada para consultar los servidores DNS y verificar la resolución de nombres de dominio o direcciones IP.
+Servidor predeterminado: dns.google	Nombre del servidor DNS activo: Indica el nombre del servidor al que tu equipo le hará las consultas DNS. En este caso, identifica al DNS público de Google.
+Address: 8.8.8.8	Dirección IP del servidor DNS: Muestra la IP exacta del servidor DNS predeterminado que está respondiendo a la solicitud (en este caso, la IP primaria del DNS de Google).
+>	Modo interactivo activo: Al presionar Enter tras escribir nslookup sin argumentos, la consola entra en modo interactivo. El cursor > indica que está listo para recibir comandos de consulta directos.
+Principales funciones y comandos dentro del modo interactivo (>):
+
+Consultar una dirección IP: Escribe cualquier dominio (ejemplo: google.com) y presiona Enter para obtener sus IP asociadas (Registros A/AAAA).
+
+Búsqueda inversa: Escribe una dirección IP (ejemplo: 142.250.190.46) para averiguar a qué dominio pertenece (Registro PTR).
+
+Cambiar tipo de registro (set type=):
+
+set type=mx → Consulta los servidores de correo de un dominio.
+
+set type=ns → Muestra los servidores de nombres autoritativos del dominio.
+
+set type=txt → Muestra registros de texto (útil para validar SPF, DKIM o propiedad de un dominio).
+
+Cambiar de servidor DNS (server): Permite hacer pruebas con otro servidor. Ejemplo: escribir server 1.1.1.1 cambia las consultas al DNS de Cloudflare.
+
+Salir del modo interactivo: Escribe exit y presiona Enter para volver a la línea de comandos normal de Windows.
