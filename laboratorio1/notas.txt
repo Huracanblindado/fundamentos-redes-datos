@@ -112,3 +112,37 @@ Comandos útiles de ARP (para usar saliendo de nslookup con exit):
 arp -a: Muestra la tabla de direcciones IP y sus correspondientes direcciones MAC guardadas en tu equipo.
 
 arp -d *: Borra la caché ARP del sistema (útil para refrescar las conexiones si cambiaste de router o de IP).
+
+route
+Al igual que en el caso anterior, volviste a escribir una orden (route) estando dentro del modo interactivo de nslookup (marcado por el símbolo >), por lo que el sistema intentó buscar "route" como si fuera una página web.
+
+Elemento	Descripción de lo que sucede en la imagen
+> route	Ingresaste la palabra route dentro de la herramienta nslookup, por lo que esta interpretó que buscabas la IP del sitio web "route".
+Servidor: dns.google
+
+
+Address: 8.8.8.8
+
+Muestra el servidor DNS de Google encargado de procesar la búsqueda.
+*** dns.google no encuentra route: Non-existent domain	Error que confirma que no existe ningún sitio o dominio registrado llamado "route".
+¿Qué es realmente el comando route y para qué sirve?
+
+El comando route es una herramienta de administración de red de la consola de Windows (CMD) que sirve para visualizar y manipular la tabla de enrutamiento IP del sistema operativo.
+
+¿Para qué se utiliza?
+
+Ver la tabla de enrutamiento: Muestra cómo el equipo decide por qué tarjeta de red o puerta de enlace (gateway/router) enviar el tráfico de datos según la IP de destino.
+
+Añadir rutas estáticas: Permite redirigir manualmente el tráfico dirigido a una red o IP específica a través de un gateway distinto al predeterminado.
+
+Eliminar o modificar rutas: Útil para solucionar problemas donde el tráfico no sale por la interfaz correcta (por ejemplo, al usar conexiones VPN o múltiples tarjetas de red).
+
+Comandos útiles de route (ejecutándolos fuera de nslookup):
+
+route print: Muestra toda la tabla de enrutamiento actual de tu equipo (interfaces, rutas IPv4 e IPv6 y la puerta de enlace predeterminada).
+
+route add <IP_destino> mask <máscara> <gateway>: Agrega una nueva ruta manual a la tabla.
+
+route delete <IP_destino>: Elimina una ruta específica de la tabla.
+
+Nota: Para salir del modo interactivo de nslookup y poder usar route print, simplemente escribe exit y presiona Enter.
