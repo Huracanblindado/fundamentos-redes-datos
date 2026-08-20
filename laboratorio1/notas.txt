@@ -42,3 +42,19 @@ Puerta de enlace predeterminada:
 Valor: fe80::1%17 (IPv6) y 10.0.0.1 (IPv4)
 
 Explicación: La dirección del router o módem. Es la "puerta de salida" por donde tu computadora envía el tráfico de datos cuando necesitas acceder a internet o a otra red externa.
+
+netstat
+Parámetro	Función y Uso Práctico
+-d	Evita la resolución de nombres (DNS): Muestra únicamente las direcciones IP de cada salto sin intentar traducirlas a nombres de dominio (hostnames). Esto acelera significativamente la prueba.
+-h saltos_máximos	Límite de saltos: Define la cantidad máxima de routers (saltos) que rastreará antes de detenerse (por defecto suele ser 30). Ejemplo: tracert -h 15 google.com limita la búsqueda a 15 saltos.
+-j lista-host	Enrutamiento de origen relajado (Solo IPv4): Permite especificar una lista de nodos o routers intermedios por los que deseas que pase la ruta antes de llegar al destino.
+-w tiempo_espera	Tiempo de espera (Timeout): Configura en milisegundos cuánto tiempo esperará una respuesta de cada router antes de dar un "tiempo de espera agotado" (*). Ejemplo: tracert -w 1000 8.8.8.8 establece el tiempo límite en 1 segundo.
+-R	Ruta de retorno (Solo IPv6): Rastrea y muestra la ruta de regreso que toman los paquetes desde el destino hacia tu equipo.
+-S srcaddr	Dirección IP de origen (Solo IPv6): Especifica cuál de tus direcciones IP locales utilizar para enviar los paquetes (útil cuando tu tarjeta de red tiene múltiples IP configuradas).
+-4	Forzar IPv4: Obliga a la herramienta a realizar el rastreo únicamente a través de red IPv4, ignorando IPv6 aunque esté disponible.
+-6	Forzar IPv6: Obliga a la herramienta a realizar el rastreo exclusivamente a través de red IPv6.
+Casos de uso más comunes:
+
+Diagnóstico rápido: Usa tracert -d <destino> para obtener una respuesta inmediata sin perder tiempo esperando la traducción de nombres DNS.
+
+Redes lentas o lejanas: Usa tracert -w 3000 <destino> si estás diagnosticando una conexión satelital o muy lenta para evitar falsos "tiempos de espera agotados".
