@@ -82,3 +82,33 @@ set type=txt → Muestra registros de texto (útil para validar SPF, DKIM o prop
 Cambiar de servidor DNS (server): Permite hacer pruebas con otro servidor. Ejemplo: escribir server 1.1.1.1 cambia las consultas al DNS de Cloudflare.
 
 Salir del modo interactivo: Escribe exit y presiona Enter para volver a la línea de comandos normal de Windows.
+
+arp
+En la imagen estás ejecutando un comando dentro del modo interactivo de nslookup (que abriste en el paso anterior), por lo que el sistema interpretó la palabra arp como si fuera la dirección de una página web en lugar de un comando de red.
+
+Elemento	Descripción de lo que sucede en la imagen
+> arp	Escribiste arp estando dentro de nslookup. La consola tomó la palabra "arp" como si fuera un nombre de dominio que querías buscar en internet.
+Servidor: dns.google
+
+
+Address: 8.8.8.8
+
+Muestra el servidor DNS (de Google) que intentó procesar la solicitud.
+*** dns.google no encuentra arp: Non-existent domain	Es un mensaje de error. El servidor DNS te indica que la web "arp" no existe como sitio o dominio en internet.
+¿Qué es en realidad arp y para qué sirve?
+
+El protocolo ARP (Address Resolution Protocol) es un comando del sistema operativo (que debe usarse directamente en la consola principal de Windows, no dentro de nslookup) para asociar direcciones IP con direcciones físicas de red (MAC Address).
+
+¿Para qué se utiliza?
+
+Mapeo de la red local: Mapea la dirección IP de un dispositivo en tu red local con su dirección MAC física (la dirección única de la tarjeta de red).
+
+Diagnóstico de conflictos de IP: Permite verificar si dos equipos en la red local están usando por error la misma dirección IP.
+
+Seguridad de red: Ayuda a detectar ataques de suplantación de identidad en la red local (conocidos como ARP Spoofing o ARP Poisoning).
+
+Comandos útiles de ARP (para usar saliendo de nslookup con exit):
+
+arp -a: Muestra la tabla de direcciones IP y sus correspondientes direcciones MAC guardadas en tu equipo.
+
+arp -d *: Borra la caché ARP del sistema (útil para refrescar las conexiones si cambiaste de router o de IP).
