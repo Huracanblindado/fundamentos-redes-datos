@@ -1,0 +1,44 @@
+Adaptador de LAN inalámbrica Wi-Fi:
+Indica la interfaz de red que estás consultando (tu antena o tarjeta Wi-Fi).
+
+Sufijo DNS específico para la conexión:
+
+Valor: (En blanco)
+
+Explicación: Un dominio que tu proveedor de internet o red asigna automáticamente para resolver nombres locales. Al estar vacío, significa que la red no asignó ningún sufijo o dominio específico.
+
+Dirección IPv6 (Principales / Globales):
+
+Valor: 2001:1308:2415:7d00::1 y 2001:1308:2415:7d00:adf4:45ef:ff96:7c60
+
+Explicación: Es tu identificador único e identificable globalmente en la red de nueva generación IPv6. A diferencia de las IPv4 internas, estas direcciones te permiten comunicarte directamente con servidores en internet que usen IPv6.
+
+Dirección IPv6 temporal:
+
+Valor: 2001:1308:2415:7d00:c85e:1508:5e98:379a
+
+Explicación: Una IP asignada dinámicamente que cambia periódicamente. Se utiliza para salir a internet protegiendo tu privacidad, evitando que rastreen tu dispositivo de forma permanente mediante la IPv6 principal.
+
+Vínculo: dirección IPv6 local:
+
+Valor: fe80::510b:2ec4:ff93:8705%17
+
+Explicación: Es la IP de red local bajo protocolo IPv6. Solo sirve para que tu equipo se comunique con otros dispositivos dentro de la misma red Wi-Fi (no sale a internet). El %17 es el identificador de la interfaz en Windows.
+
+Dirección IPv4:
+
+Valor: 10.0.0.19
+
+Explicación: Tu dirección de red privada clásica en IPv4. Identifica de forma única a tu computadora dentro de la red local creada por tu router.
+
+Máscara de subred:
+
+Valor: 255.255.255.0
+
+Explicación: Define qué parte de la IP pertenece a la red y qué parte al equipo. Con este valor, determina que todos los dispositivos de tu red tendrán una IP que comience en 10.0.0.X.
+
+Puerta de enlace predeterminada:
+
+Valor: fe80::1%17 (IPv6) y 10.0.0.1 (IPv4)
+
+Explicación: La dirección del router o módem. Es la "puerta de salida" por donde tu computadora envía el tráfico de datos cuando necesitas acceder a internet o a otra red externa.
