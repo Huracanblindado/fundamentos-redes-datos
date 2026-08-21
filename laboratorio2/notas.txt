@@ -209,3 +209,26 @@ Confirma que el cambio se aplicó con éxito.
 
 Efecto práctico de este comando:
 La cuenta dell ahora está deshabilitada. No aparecerá en la pantalla de inicio de sesión de Windows y nadie podrá acceder a ella, pero sus archivos, carpetas y configuraciones no se han borrado. Para volver a usarla en el futuro, solo debes ejecutar net user dell /active:yes.
+
+
+net user dell fullmane Jesus Alberto 
+1. Ruta de la consola (C:\Windows\system32>)
+
+Confirma que estás ejecutando la ventana de comandos en modo Administrador, lo que otorga el nivel de permisos necesario para modificar la configuración de los usuarios en Windows.
+
+2. Desglose del comando (net user dell /fullname:Jesus Alberto)
+
+net user: Es la herramienta de Windows para la gestión de cuentas.
+
+dell: Es el nombre de usuario interno del sistema al que le estás aplicando el cambio.
+
+/fullname:Jesus Alberto: Es el parámetro que le asigna el nombre completo Jesus Alberto a la cuenta.
+
+3. Respuesta del sistema (Se ha completado el comando correctamente.)
+
+Windows procesó la instrucción sin errores y aplicó el cambio de inmediato.
+
+Efecto práctico:
+A partir de este momento, en la pantalla de bienvenida/inicio de sesión de Windows y en el menú Inicio aparecerá el nombre visible Jesus Alberto, pero la carpeta principal del usuario seguirá llamándose C:\Usuarios\dell.
+
+(Nota: En este caso funcionó directamente, pero como recomendación para el futuro, cuando el nombre completo lleve espacios es ideal ponerlo entre comillas: /fullname:"Jesus Alberto").
