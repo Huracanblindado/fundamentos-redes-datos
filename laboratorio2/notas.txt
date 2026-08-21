@@ -170,3 +170,22 @@ dell: El nombre de la cuenta a la cual se le aplica la restricción.
 
 Se ha completado el comando correctamente.:
 Es la confirmación de Windows indicando que la restricción de horario fue procesada y guardada sin errores.
+
+net user dell active yes
+Este es el desglose completo de la ejecución mostrada en la pantalla:
+
+1. La ruta del directorio (C:\Windows\system32>)
+
+Indica que abriste la consola CMD en modo Administrador. Al estar dentro de la carpeta del sistema system32, Windows confirma que tienes los permisos elevados necesarios para hacer cambios de nivel del sistema.
+
+2. El comando (net user dell /active:yes)
+
+net user: La herramienta de comandos de Windows para administrar las cuentas de usuario.
+
+dell: El nombre de la cuenta de usuario específica sobre la que estás realizando el cambio.
+
+/active:yes: El parámetro que le indica a Windows que debe activar u habilitar esa cuenta. Si la cuenta estaba suspendida, bloqueada o deshabilitada, este comando le devuelve el acceso completo para iniciar sesión.
+
+3. La respuesta del sistema (Se ha completado el comando correctamente.)
+
+Confirma que Windows procesó la instrucción sin ningún fallo, aplicando el cambio de inmediato en la base de datos de usuarios.
