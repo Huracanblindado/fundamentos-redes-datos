@@ -232,3 +232,23 @@ Efecto práctico:
 A partir de este momento, en la pantalla de bienvenida/inicio de sesión de Windows y en el menú Inicio aparecerá el nombre visible Jesus Alberto, pero la carpeta principal del usuario seguirá llamándose C:\Usuarios\dell.
 
 (Nota: En este caso funcionó directamente, pero como recomendación para el futuro, cuando el nombre completo lleve espacios es ideal ponerlo entre comillas: /fullname:"Jesus Alberto").
+
+net user dell comment Cuenta principal de Trabajo 
+La imagen muestra la adición exitosa de una descripción o comentario a una cuenta de usuario en Windows desde la consola de comandos (CMD).
+
+Desglose ítem por ítem:
+
+C:\Windows\system32>:
+Es la ruta del sistema que confirma que la consola está ejecutada como Administrador, otorgando los permisos necesarios para aplicar cambios en las cuentas.
+
+net user dell /comment:"Cuenta principal de Trabajo":
+Es la orden ejecutada. Se compone de las siguientes partes:
+
+net user: El comando nativo de Windows para gestionar usuarios.
+
+dell: El nombre de la cuenta de usuario específica que vas a modificar.
+
+/comment:"Cuenta principal de Trabajo": El parámetro utilizado para adjuntar una nota descriptiva o comentario al perfil de usuario (el texto va entre comillas para incluir espacios).
+
+Se ha completado el comando correctamente.:
+La confirmación del sistema operativo indicando que el comentario fue asignado a la cuenta sin ningún problema.
