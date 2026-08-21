@@ -131,3 +131,22 @@ Error de sistema 5: Es el código numérico interno que usa Windows para identif
 
 Acceso denegado: La confirmación en texto de que Windows bloqueó la acción. Para proteger el equipo, el sistema no permite borrar usuarios si la consola no fue abierta explícitamente con privilegios administrativos elevados, incluso si tu cuenta actual pertenece al grupo de administradores.
 
+net user dell nueva_contraseña 
+La imagen muestra el resultado de haber cambiado con éxito la contraseña de un usuario desde la consola de Windows (CMD) ejecutada con privilegios elevados.
+
+Desglose ítem por ítem:
+
+C:\Windows\system32>:
+Indica el directorio del sistema desde el cual se ejecuta el programa. La presencia de system32 confirma que abriste el Símbolo del sistema (CMD) como Administrador, lo cual brinda los permisos requeridos para gestionar usuarios.
+
+net user dell nueva_contraseña:
+Es la instrucción ingresada, estructurada de la siguiente manera:
+
+net user: El comando nativo de Windows para administrar las cuentas de usuario.
+
+dell: El nombre de la cuenta a la cual le estás aplicando la modificación.
+
+nueva_contraseña: El nuevo texto o clave asignada directamente a esa cuenta.
+
+Se ha completado el comando correctamente.:
+Es la respuesta de validación de Windows, indicando que la modificación de la contraseña del usuario "dell" se procesó y aplicó sin ningún problema.
