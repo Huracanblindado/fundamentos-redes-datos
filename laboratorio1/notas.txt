@@ -151,3 +151,25 @@ Nota: Para salir del modo interactivo de nslookup y poder usar route print, simp
 pathping
 En la imagen ocurre el mismo error que en tus consultas anteriores: ingresaste el comando de red (pathping) estando dentro del modo interactivo de nslookup (indicado por el símbolo >), por lo que la herramienta intentó buscar su dirección IP como si fuera una página web.ElementoDescripción de lo que sucede en la imagen> pathpingEscribiste la palabra pathping dentro de nslookup. El sistema asumió que querías buscar el dominio "pathping".Servidor: dns.googleAddress: 8.8.8.8Indica que el servidor DNS público de Google recibió tu consulta de búsqueda.*** dns.google no encuentra pathping: Non-existent domainMensaje de error del servidor DNS confirmando que "pathping" no es un dominio web registrado.¿Qué es realmente el comando pathping y para qué sirve?pathping es una utilidad avanzada de diagnóstico de red en Windows que combina las mejores características de los comandos ping y tracert.Rastreo y testeo simultáneo: Primero mapea la ruta completa de routers (saltos) hasta el destino. Luego, envía cientos de paquetes de prueba a cada uno de esos routers durante un periodo prolongado (unos 25 segundos por router).Diagnóstico de pérdida de paquetes: Al finalizar, genera un reporte estadístico detallado mostrando qué porcentaje exacto de paquetes se perdió en cada nodo intermedio.Identificación de lag: Es la herramienta definitiva para descubrir exactamente qué router específico en internet está causando un cuello de botella, latencia alta (lag) o desconexiones. Resulta sumamente útil para diagnosticar la calidad de conexión hacia servidores remotos de bases de datos o servidores de juegos tácticos competitivos que requieren baja latencia.Cómo ejecutarlo correctamente:Para usar esta herramienta, primero debes salir de nslookup escribiendo exit y presionando Enter. Una vez en la ruta normal del sistema (por ejemplo, C:\Users\Dell>), puedes ejecutar:pathping google.com o pathping 8.8.8.8
 
+tracert
+La imagen muestra la pantalla de ayuda del comando tracert en la consola de Windows (CMD), el cual sirve para rastrear la ruta que siguen los paquetes de datos desde tu equipo hasta un destino en la red.
+
+Desglose del contenido:
+
+Comando ejecutado (tracert): Al escribirlo solo (sin un destino como google.com), el sistema muestra el manual de uso.
+
+Sintaxis de uso (Uso:): Muestra la estructura para ejecutar el comando con sus parámetros opcionales y el nombre_destino obligatorio al final.
+
+Opciones (Parámetros principales):
+
+-d: Evita traducir las direcciones IP a nombres de dominio (hace el rastreo más rápido).
+
+-h saltos_máximos: Define el límite de routers ("saltos") por los que pasará la prueba antes de detenerse.
+
+-j lista-host: Establece una ruta de origen relajada (exclusivo para IPv4).
+
+-w tiempo_espera: Configura el tiempo de espera en milisegundos para la respuesta de cada salto.
+
+-R / -S srcaddr: Opciones específicas para rastreo y origen en redes IPv6.
+
+-4 / -6: Fuerza al comando a usar protocolo IPv4 o IPv6, respectivamente.
