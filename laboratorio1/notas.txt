@@ -173,3 +173,12 @@ Opciones (Parámetros principales):
 -R / -S srcaddr: Opciones específicas para rastreo y origen en redes IPv6.
 
 -4 / -6: Fuerza al comando a usar protocolo IPv4 o IPv6, respectivamente.
+
+hostname
+La imagen muestra la ejecución del comando hostname en la consola de comandos (CMD) de Windows. Sirve para mostrar el nombre del equipo en la red local.
+
+C:\Users\Dell>: Es la ruta del directorio de trabajo actual desde donde se ejecutó la orden.
+
+hostname: Es el comando de red ingresado para consultar el nombre de la máquina.
+
+DESKTOP-KTA9KTL: Es la respuesta devuelta por el sistema, que indica el nombre asignado al equipo.
