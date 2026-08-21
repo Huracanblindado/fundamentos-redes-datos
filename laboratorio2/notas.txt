@@ -189,3 +189,23 @@ dell: El nombre de la cuenta de usuario específica sobre la que estás realizan
 3. La respuesta del sistema (Se ha completado el comando correctamente.)
 
 Confirma que Windows procesó la instrucción sin ningún fallo, aplicando el cambio de inmediato en la base de datos de usuarios.
+
+net user del active no 
+1. Ruta de la consola (C:\Windows\system32>)
+
+Indica que el comando se ejecutó desde una consola con permisos de Administrador, lo cual es indispensable para que Windows permita modificar el estado de un usuario del sistema.
+
+2. Desglose del comando (net user dell /active:no)
+
+net user: La herramienta integrada de Windows para administrar cuentas de usuario.
+
+dell: El nombre de la cuenta sobre la cual estás aplicando la instrucción.
+
+/active:no: El parámetro que le indica a Windows que debe deshabilitar o desactivar la cuenta.
+
+3. Respuesta del sistema (Se ha completado el comando correctamente.)
+
+Confirma que el cambio se aplicó con éxito.
+
+Efecto práctico de este comando:
+La cuenta dell ahora está deshabilitada. No aparecerá en la pantalla de inicio de sesión de Windows y nadie podrá acceder a ella, pero sus archivos, carpetas y configuraciones no se han borrado. Para volver a usarla en el futuro, solo debes ejecutar net user dell /active:yes.
