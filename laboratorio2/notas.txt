@@ -150,3 +150,23 @@ nueva_contraseña: El nuevo texto o clave asignada directamente a esa cuenta.
 
 Se ha completado el comando correctamente.:
 Es la respuesta de validación de Windows, indicando que la modificación de la contraseña del usuario "dell" se procesó y aplicó sin ningún problema.
+
+net user dell time L S 8am 5pm
+La imagen muestra la aplicación exitosa de un límite de horario para el inicio de sesión de un usuario en Windows mediante la consola de comandos (CMD).
+
+Desglose ítem por ítem:
+
+C:\Windows\system32>:
+Muestra la ruta del sistema, lo que confirma que la consola fue ejecutada con permisos de Administrador.
+
+net user dell /time:L-V,8am-5pm:
+Es la orden ejecutada para restringir el acceso a la cuenta. Se desglosa así:
+
+net user: El comando para gestionar usuarios en Windows.
+
+dell: El nombre de la cuenta a la cual se le aplica la restricción.
+
+/time:L-V,8am-5pm: El parámetro que establece el horario permitido. Define que el usuario dell solo podrá iniciar sesión de Lunes a Viernes (L-V), en un rango de 8:00 AM a 5:00 PM. Fuera de ese rango o durante el fin de semana, el sistema le denegará el acceso.
+
+Se ha completado el comando correctamente.:
+Es la confirmación de Windows indicando que la restricción de horario fue procesada y guardada sin errores.
