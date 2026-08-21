@@ -182,3 +182,31 @@ C:\Users\Dell>: Es la ruta del directorio de trabajo actual desde donde se ejecu
 hostname: Es el comando de red ingresado para consultar el nombre de la máquina.
 
 DESKTOP-KTA9KTL: Es la respuesta devuelta por el sistema, que indica el nombre asignado al equipo.
+
+ getmac
+La imagen muestra la ejecución del comando getmac en la consola de comandos de Windows (CMD). Este comando se utiliza para obtener la dirección física (MAC) de todas las tarjetas de red instaladas o configuradas en tu equipo.
+
+Desglose elemento por elemento:
+
+C:\Users\Dell> getmac:
+Es la ruta donde te encuentras y la orden ejecutada. El comando le pide al sistema operativo que consulte y devuelva el identificador físico único de cada adaptador de red.
+
+Columna Dirección física:
+Muestra el número MAC asignado por el fabricante a cada tarjeta de red (formado por 6 pares de caracteres alfanuméricos).
+
+Columna Nombre de transporte:
+Muestra el estado o la identificación interna dentro de Windows asociada a ese adaptador de red.
+
+Explicación de cada línea de resultado:
+
+5C-AC-4C-65-0E-C0 | \Device\Tcpip_{85FE...}:
+Corresponde a la interfaz de red activa en ese momento (ya sea Wi-Fi o cable Ethernet conectado) que tiene asignado el protocolo TCP/IP y comunicación en la red.
+
+00-26-B9-F5-00-15 | Medios desconectados:
+Es la dirección MAC de un adaptador físico existente en el equipo, pero que en este momento no está en uso (por ejemplo, el puerto Ethernet si estás usando Wi-Fi, o viceversa).
+
+0A-00-27-00-00-0F | \Device\Tcpip_{7BF6...}:
+Es una tarjeta de red virtual activa. Los identificadores que empiezan por 0A-00-27 suelen pertenecer a programas de virtualización como VirtualBox.
+
+0A-00-27-00-00-14 | \Device\Tcpip_{BF68...}:
+Otra interfaz de red virtual activa creada por Software de virtualización o adaptadores de red adicionales de Windows.
