@@ -252,3 +252,23 @@ dell: El nombre de la cuenta de usuario específica que vas a modificar.
 
 Se ha completado el comando correctamente.:
 La confirmación del sistema operativo indicando que el comentario fue asignado a la cuenta sin ningún problema.
+
+net user dell passwordchg yes
+La imagen muestra la configuración exitosa del permiso que permite al usuario cambiar su propia contraseña en Windows desde la consola de comandos (CMD).
+
+Desglose ítem por ítem:
+
+C:\Windows\system32>:
+Es la ruta del sistema que confirma que abriste el Símbolo del sistema (CMD) como Administrador, otorgando los privilegios necesarios para realizar cambios de seguridad.
+
+net user dell /passwordchg:yes:
+Es la orden ejecutada. Se desglosa en:
+
+net user: El comando de administración de cuentas de usuario en Windows.
+
+dell: El nombre del usuario específico al que se le aplicará el parámetro.
+
+/passwordchg:yes: La instrucción que autoriza explicitamente al usuario (yes) a cambiar su propia contraseña cuando lo desee. (Si usaras no, se lo impedirías).
+
+Se ha completado el comando correctamente.:
+La respuesta del sistema operativo que confirma que la autorización fue registrada con éxito en la cuenta.
