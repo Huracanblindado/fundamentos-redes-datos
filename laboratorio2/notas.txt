@@ -28,3 +28,50 @@ Es una cuenta de servicio utilizada por Windows Defender Application Guard para 
 
 Se ha completado el comando correctamente.:
 Confirmación del sistema operativo indicando que la consulta finalizó sin errores.
+
+net user dell
+La imagen muestra el resultado del comando net user dell, el cual despliega los detalles de configuración y seguridad del usuario específico "Dell".
+
+Información general de la cuenta
+
+Nombre de usuario (Dell): Identificador del perfil dentro del sistema operativo.
+
+Nombre completo (Vacío): Nombre real asignado al usuario. Al estar en blanco, no se ha definido uno.
+
+Comentario / Comentario del usuario (Vacíos): Notas sobre la función o descripción de la cuenta.
+
+Código de país o región (000 Predeterminado): Código de idioma y región configurado para la cuenta.
+
+Cuenta activa (Sí): Indica que la cuenta está habilitada para usarse.
+
+La cuenta expira (Nunca): No tiene una fecha límite programada para su desactivación automática.
+
+Parámetros de contraseña y seguridad
+
+Último cambio de contraseña (21/8/2026 5:02:44 p. m.): Fecha y hora exactas en que se estableció o modificó la clave por última vez.
+
+La contraseña expira (Nunca): La clave no vence ni exige un cambio periódico.
+
+Cambio de contraseña (21/8/2026 5:02:44 p. m.): Indica a partir de qué fecha el usuario tiene permitido modificar su clave nuevamente.
+
+Contraseña requerida (No): Permite al usuario iniciar sesión sin escribir una clave.
+
+El usuario puede cambiar la contraseña (Sí): Permisos otorgados para que el propio usuario modifique su clave cuando lo desee.
+
+Restricciones de acceso y sesión
+
+Estaciones de trabajo autorizadas (Todas): Permite iniciar sesión en cualquier computadora dentro del dominio o red local.
+
+Script de inicio de sesión (Vacío): No ejecuta ningún archivo o script automatizado al iniciar sesión.
+
+Perfil de usuario / Directorio principal (Vacíos): No tiene configurada una ruta personalizada o remota para guardar las configuraciones o archivos del usuario.
+
+Última sesión iniciada (21/8/2026 2:01:05 p. m.): Registro del momento exacto en que ingresó al equipo por última vez.
+
+Horas de inicio de sesión autorizadas (Todas): No posee restricciones de horario; se puede usar la cuenta a cualquier hora.
+
+Grupos y permisos de red
+
+*Miembros del grupo local (Administradores): La cuenta pertenece al grupo con control total sobre la máquina.
+
+*Miembros del grupo global (Ninguno): No está asignada a ningún grupo dentro de un dominio empresarial de Windows.
