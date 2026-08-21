@@ -1,0 +1,30 @@
+net user
+La imagen muestra la ejecución del comando net user en la consola de comandos de Windows (CMD). Este comando lista todas las cuentas de usuario registradas en el equipo.
+
+Desglose línea por línea:
+
+C:\Users\Dell> net user:
+Es la instrucción ejecutada para solicitar la lista completa de usuarios locales del sistema.
+
+Cuentas de usuario de \\DESKTOP-KTA9KTL:
+Indica el nombre de la computadora (DESKTOP-KTA9KTL) a la cual pertenecen las cuentas listadas.
+
+Explicación de las cuentas encontradas:
+
+Administrador:
+Es la cuenta integrada con privilegios elevados del sistema operativo. Por defecto viene deshabilitada en Windows por seguridad.
+
+DefaultAccount:
+Es una cuenta del sistema administrada por Windows que se utiliza para ejecutar ciertos procesos y aplicaciones del sistema en segundo plano.
+
+Dell:
+Es la cuenta de usuario principal activa (tu perfil de usuario actual), con la que iniciaste sesión y usas la computadora.
+
+Invitado:
+Es una cuenta integrada pensada para accesos temporales con permisos extremadamente reducidos. Por defecto también viene desactivada.
+
+WDAGUtilityAccount:
+Es una cuenta de servicio utilizada por Windows Defender Application Guard para ejecutar entornos de navegación y aplicaciones de forma aislada y segura dentro de un contenedor.
+
+Se ha completado el comando correctamente.:
+Confirmación del sistema operativo indicando que la consulta finalizó sin errores.
