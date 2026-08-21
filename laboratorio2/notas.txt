@@ -75,3 +75,59 @@ Grupos y permisos de red
 *Miembros del grupo local (Administradores): La cuenta pertenece al grupo con control total sobre la máquina.
 
 *Miembros del grupo global (Ninguno): No está asignada a ningún grupo dentro de un dominio empresarial de Windows.
+
+net user dell contraseña 
+La imagen muestra un intento de ejecución de un comando en la consola de Windows (CMD) que falla por falta de permisos.
+
+Desglose ítem por ítem:
+
+C:\Users\Dell>: Es la ruta del directorio de trabajo actual desde donde estás ejecutando las instrucciones.
+
+net user dell * /add:
+Es la orden ingresada. Intenta crear un nuevo usuario llamado "dell" (net user dell /add) y solicita asignar una contraseña de forma interactiva y oculta mediante el asterisco (*).
+
+Escriba una contraseña para el usuario::
+El sistema operativo solicita la nueva clave para la cuenta que se intenta crear. Al escribirla, los caracteres no se muestran en pantalla por seguridad.
+
+Vuelva a escribir su contraseña para confirmarla::
+El sistema solicita ingresar la misma clave una segunda vez para verificar que no haya errores de tipeo.
+
+Error de sistema 5.:
+Es un código de error nativo de Windows que significa técnicamente "Acceso denegado" (Access Denied).
+
+Acceso denegado.:
+El mensaje explícito del sistema indicando que la instrucción no se pudo completar. Esto ocurre porque la consola de comandos se abrió como un usuario estándar o sin privilegios elevados.
+
+¿Cómo solucionarlo?
+
+Para crear usuarios o realizar modificaciones del sistema, debes ejecutar la consola como Administrador:
+
+Cierra la ventana actual de CMD.
+
+En el menú de inicio de Windows, busca "cmd" o "Símbolo del sistema".
+
+Haz clic derecho sobre el ícono y selecciona Ejecutar como administrador.
+
+Vuelve a ingresar el comando.
+
+net user dell delete 
+Este es el desglose paso a paso de lo que está sucediendo exactamente en tu pantalla:
+
+1. La ruta de acceso (C:\Users\Dell>)
+
+Muestra la carpeta desde la que estás ejecutando la consola. Significa que estás dentro de la sesión de un usuario llamado Dell con un nivel de privilegios estándar (no elevado).
+
+2. El comando que ingresaste (net user dell /delete)
+
+net user: La herramienta base de Windows para gestionar cuentas de usuario.
+
+dell: El nombre específico del usuario que intentas eliminar.
+
+/delete: El parámetro o instrucción que le indica al sistema que debe borrar la cuenta.
+
+3. La respuesta del sistema (Error de sistema 5. Acceso denegado.)
+
+Error de sistema 5: Es el código numérico interno que usa Windows para identificar específicamente la falta de permisos de administrador (ERROR_ACCESS_DENIED).
+
+Acceso denegado: La confirmación en texto de que Windows bloqueó la acción. Para proteger el equipo, el sistema no permite borrar usuarios si la consola no fue abierta explícitamente con privilegios administrativos elevados, incluso si tu cuenta actual pertenece al grupo de administradores.
+
