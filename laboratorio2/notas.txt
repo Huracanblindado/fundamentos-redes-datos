@@ -301,3 +301,23 @@ Aplica la restricción a ese nuevo usuario:
 DOS
 net user prueba /passwordchg:no
 En esa cuenta nueva sí responderá "Se ha completado el comando correctamente", ya que no es una cuenta de administración.
+
+net user dell /expire:31/12/2026
+La imagen muestra la asignación exitosa de una fecha de expiración para una cuenta de usuario en Windows a través de la consola de comandos (CMD).
+
+Desglose ítem por ítem:
+
+C:\Windows\system32>:
+Ruta del sistema que confirma que abriste el Símbolo del sistema (CMD) como Administrador, lo cual brinda los permisos necesarios para modificar parámetros de seguridad de los usuarios.
+
+net user dell /expires:31/12/2026:
+Es la instrucción ejecutada para establecer una fecha límite de uso para la cuenta. Se compone de:
+
+net user: El comando nativo de Windows para gestionar cuentas de usuario.
+
+dell: El nombre de la cuenta a la cual se le aplicará la restricción.
+
+/expires:31/12/2026: El parámetro que establece la fecha de caducidad. En este caso, la cuenta dell quedará desactivada automáticamente y no podrá iniciar sesión a partir del 31 de diciembre de 2026 (para eliminar esta restricción, se usaría /expires:never).
+
+Se ha completado el comando correctamente.:
+La confirmación del sistema operativo indicando que la fecha de caducidad fue registrada con éxito en el perfil de usuario.
