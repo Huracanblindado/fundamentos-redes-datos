@@ -321,3 +321,23 @@ dell: El nombre de la cuenta a la cual se le aplicará la restricción.
 
 Se ha completado el comando correctamente.:
 La confirmación del sistema operativo indicando que la fecha de caducidad fue registrada con éxito en el perfil de usuario.
+
+net user dell *
+Este es el desglose de lo que ocurrió en la pantalla:
+
+1. Comando inicial (net user dell *)
+
+Solicitaste a Windows cambiar la contraseña del usuario dell utilizando el asterisco (*) para no escribir la clave de forma visible en el comando.
+
+2. Entrada interactiva de datos
+
+Escriba una contraseña para el usuario: Escribiste la nueva clave a ciegas (los caracteres permanecen ocultos) y presionaste Enter.
+
+Vuelva a escribir su contraseña para confirmarla: Repetiste la misma clave a ciegas para verificar que no hubo errores de escritura y presionaste Enter.
+
+3. Confirmación del sistema (Se ha completado el comando correctamente.)
+
+Windows validó que ambas contraseñas coincidieron y actualizó la clave de acceso para la cuenta dell de inmediato.
+
+Efecto práctico:
+A partir de este momento, el usuario dell deberá usar la nueva clave que ingresaste para iniciar sesión en Windows.
