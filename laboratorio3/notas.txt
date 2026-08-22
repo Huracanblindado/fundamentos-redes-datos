@@ -30,3 +30,33 @@ Si deseas agregar un usuario existente a un grupo:
 
 DOS
 net localgroup Administradores nombre_usuario /add
+
+net localgroup Administradores 
+La imagen muestra la ejecución del comando net localgroup Administradores en la consola de Windows (CMD). Este comando se utiliza para inspeccionar los miembros de un grupo específico, en este caso, del grupo privilegiado "Administradores".
+
+Desglose línea por línea
+
+net localgroup Administradores: Es la instrucción ejecutada. Al agregar el nombre de un grupo al final, le pides a Windows que muestre los detalles y los integrantes de ese grupo en particular.
+
+Nombre de alias: Administradores: Confirma el grupo que estás consultando.
+
+Comentario: Los administradores tienen acceso completo...: Una breve descripción oficial del sistema sobre las capacidades de este grupo (control total del equipo).
+
+Miembros: Es la sección principal que lista las cuentas de usuario o de sistema que pertenecen a este grupo.
+
+Análisis de las cuentas listadas
+
+Administrador: Es la cuenta local nativa integrada de Windows (Built-in Administrator). Viene creada por defecto en el sistema operativo, aunque habitualmente permanece deshabilitada por motivos de seguridad a menos que se active manualmente.
+
+Dell: Es la cuenta de usuario principal activa en este equipo. Al estar listada aquí, significa que este usuario tiene privilegios elevados de administrador (puede instalar programas, modificar la configuración del sistema, editar el registro, etc.).
+
+Comandos útiles relacionados
+
+Para añadir un usuario a este grupo:
+
+DOS
+net localgroup Administradores NombreUsuario /add
+Para quitar un usuario de este grupo:
+
+DOS
+net localgroup Administradores NombreUsuario /delete
