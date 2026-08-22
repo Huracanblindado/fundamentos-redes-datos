@@ -91,4 +91,26 @@ net localgroup Proyectos Dell /add
 Para eliminar el grupo si ya no lo necesitas:
 
 DOS
+
+
 net localgroup Proyectos /delete
+
+El comando net localgroup Proyectos /delete sirve para eliminar de forma permanente un grupo local creado previamente en el sistema operativo.
+
+Desglose término a término
+
+net: La herramienta de comandos de Windows para administrar redes, usuarios y servicios del sistema.
+
+localgroup: Indica que la instrucción actuará sobre la base de datos de grupos locales de la máquina.
+
+Proyectos: El nombre del grupo objetivo que se va a borrar.
+
+/delete: El parámetro o bandera que le ordena a Windows destruir/eliminar dicho grupo.
+
+Puntos clave sobre este comando
+
+¿Qué elimina y qué no?: Solo elimina la estructura del grupo "Proyectos". No borra las cuentas de usuario que pertenecían a él; esas cuentas siguen existiendo de forma individual en el sistema.
+
+Permisos asociados: Si este grupo tenía permisos asignados a carpetas o archivos compartidos, esos accesos vinculados al grupo quedan revocados de inmediato.
+
+Confirmación: El mensaje "Se ha completado el comando correctamente." indica que la eliminación se realizó con éxito y el grupo ya no aparecerá en la lista al ejecutar net localgroup.
