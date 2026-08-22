@@ -1,0 +1,32 @@
+net localgroup
+La imagen muestra la ejecución del comando net localgroup en la consola de comandos de Windows (CMD) dentro del equipo local llamado DESKTOP-KTA9KTL. Este comando sirve para listar todos los grupos locales de usuarios existentes en el sistema operativo.
+
+Desglose de la imagen
+
+El Comando (net localgroup): Instrucción de red y administración que le pide a Windows mostrar la base de datos de grupos de seguridad de la máquina local.
+
+Encabezado (Alias para \\DESKTOP-KTA9KTL): Indica el nombre de red del equipo donde se están consultando los grupos.
+
+La Lista (marcada con *): Cada elemento precedido por un asterisco es un grupo de seguridad predeterminado o creado en Windows.
+
+Explicación de los grupos principales
+
+Grupo	Función principal
+Administradores	Tienen acceso total y control ilimitado sobre el equipo y el sistema operativo.
+Usuarios	Usuarios estándar; pueden ejecutar programas y realizar tareas comunes, pero no modificar el sistema.
+Invitados	Cuentas con permisos muy reducidos para accesos temporales.
+Usuarios avanzados	Grupo heredado de versiones antiguas de Windows con permisos intermedios entre usuario y administrador.
+Usuarios de escritorio remoto	Permite a sus miembros iniciar sesión en el equipo a través de una conexión RDP (Escritorio Remoto).
+Operadores de copia de seguridad	Permite a los usuarios realizar e identificar copias de respaldo del sistema sin necesidad de permisos de administrador.
+IIS_IUSRS	Grupo utilizado por el servidor web local de Windows (Internet Information Services) para ejecutar aplicaciones web.
+Administradores de Hyper-V	Otorga permisos para administrar máquinas virtuales creadas con Hyper-V.
+Comandos útiles relacionados
+
+Si quieres ver qué usuarios pertenecen a un grupo específico (por ejemplo, para ver quién es administrador), ejecuta:
+
+DOS
+net localgroup Administradores
+Si deseas agregar un usuario existente a un grupo:
+
+DOS
+net localgroup Administradores nombre_usuario /add
