@@ -272,3 +272,32 @@ dell: El nombre del usuario específico al que se le aplicará el parámetro.
 
 Se ha completado el comando correctamente.:
 La respuesta del sistema operativo que confirma que la autorización fue registrada con éxito en la cuenta.
+
+net user dell passwordchg no
+Ese mensaje desplegado en pantalla es una advertencia de protección del propio sistema Windows:
+
+1. Error de sistema 1322.
+
+Es el código numérico interno con el que Windows identifica este conflicto de políticas de seguridad.
+
+2. Explicación del mensaje de error:
+
+No se permite esta operación porque es posible que una cuenta de administración se eliminara, quedara deshabilitada o no pudiera iniciar sesión.
+
+Este bloqueo ocurre porque la cuenta dell tiene priviliegios de Administrador.
+
+Windows prohíbe explícitamente negarle el cambio de contraseña a una cuenta administradora para evitar que un administrador quede bloqueado de su propio equipo sin forma de recuperar el acceso.
+
+Demostración práctica (Cómo probar el comando correctamente):
+
+Para ver cómo funciona este comando sin que salga el error 1322, debes aplicarlo sobre un usuario estándar (no administrador). Puedes probar con estos dos pasos en la consola:
+
+Crea un usuario estándar de prueba:
+
+DOS
+net user prueba 1234 /add
+Aplica la restricción a ese nuevo usuario:
+
+DOS
+net user prueba /passwordchg:no
+En esa cuenta nueva sí responderá "Se ha completado el comando correctamente", ya que no es una cuenta de administración.
