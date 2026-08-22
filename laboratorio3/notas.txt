@@ -60,3 +60,35 @@ Para quitar un usuario de este grupo:
 
 DOS
 net localgroup Administradores NombreUsuario /delete
+
+net localgroup Proyect add
+El comando net localgroup Proyectos /add sirvió para crear un grupo local totalmente nuevo llamado Proyectos en el sistema operativo.
+
+Desglose del comando término a término
+
+net: La herramienta ejecutable principal de Windows para gestionar servicios, cuentas de red y recursos del sistema desde la consola.
+
+localgroup: La subfunción del comando net que especifica que la acción se aplicará sobre los grupos locales de la máquina.
+
+Proyectos: El nombre asignado al nuevo grupo que acabas de crear.
+
+/add: El parámetro o modificador que le indica a Windows que debe añadir/crear ese grupo en la base de datos de seguridad local.
+
+Resultado y utilidad
+
+El mensaje "Se ha completado el comando correctamente." confirma que el grupo se registró en el equipo. Crear grupos personalizados como este es fundamental para:
+
+Organizar permisos: Asignar accesos a carpetas o archivos compartidos a todo un equipo de trabajo de un solo golpe.
+
+Gestión centralizada: En lugar de darle permisos usuario por usuario, agregas los usuarios al grupo Proyectos y le das los permisos únicamente a ese grupo.
+
+Siguientes pasos útiles
+
+Para agregar un usuario (por ejemplo, Dell) a tu nuevo grupo:
+
+DOS
+net localgroup Proyectos Dell /add
+Para eliminar el grupo si ya no lo necesitas:
+
+DOS
+net localgroup Proyectos /delete
